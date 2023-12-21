@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #container {
+        background-color: burlywood;
+        font: times new roman;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Formulir Pendaftaran</h1>
+      <form id="registrationForm">
+        <div class="form-group">
+          <label for="nama">Nama:</label>
+          <input type="text" id="nama" name="nama" />
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" />
+        </div>
+        <div class="form-group">
+          <label for="Alamat">Alamat:</label>
+          <input type="text" id="Alamat" name="Alamat" />
+        </div>
+        <div class="form-group">
+          <button type="submit">Daftar</button>
+        </div>
+      </form>
+    </div>
+
+    <script>
+      document
+        .getElementById("registrationForm")
+        .addEventListener("submit", function (event) {
+          var nama = document.getElementById("nama").value;
+          var email = document.getElementById("email").value;
+          var Alamat = document.getElementById("Alamat").value;
+
+          if (nama === "" || email === "" || password === "") {
+            alert("Isien Sakdurunge Daftar");
+            event.preventDefault(); // Alert formulir jika data kosong.
+          }
+        });
+    </script>
+  </body>
+</html>
